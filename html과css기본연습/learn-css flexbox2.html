@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <style>
+            .parent{
+                display:flex;
+                background-color:aqua;
+            } 
+            .child{
+                width:100px;
+                height:100px;
+                background-color:blue;
+                margin-right:8px;
+                border:1px solid black;
+            }
+            #child1{
+                /* flex: 증가너비(flex-grow), 감소너비(flex-shrink), 기본너비(flex-basis)(만약 해당값들이 생략되면 기본값 적용) */
+                flex: 1 1 auto;
+            }
+            #child2{
+                flex:1;
+
+            }
+            #child3{
+                flex:1 1 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "parent">
+            <div id = "child1" class = "child">자식1</div>
+            <div id = "child2" class = "child">자식2</div>
+            <div id = "child3" class = "child">자식3</div>
+        </div>
+    </body>
+</html>

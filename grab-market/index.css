@@ -1,0 +1,94 @@
+/* body태그에는 기본적으로 마진이 들어가있어서 미리 없애줘야 이쁨 */
+*{
+    margin:0;
+    padding:0;
+}
+/* ====================================================== */
+#header{
+    height:64px;
+    display:flex;
+    justify-content:center;
+    border-bottom: 1px solid gray;
+}
+#header-area{
+    width:1024px;
+    height:100%;
+    /* header-area를 header의 가운데에 정렬시키기 위한 방법:
+     margin:0 auto 써도된다. */
+     display: flex;
+     align-items:center;
+}
+#header-area > img{
+    width: 128px;
+    height:36px;
+} 
+/* ====================================================== */  
+#body{
+    height:170%;
+    width:1024px;
+    /* body를 가운데 정렬시키는방법(display: flex)말고도 */
+    margin: 0 auto; 
+    padding-bottom:24px;
+}
+#banner{
+    height:300px;
+    background-color:yellow;
+}
+#banner > img{
+    width: 100%;
+    height: 300px;
+}
+#body > h1{
+    margin-top:16px;
+}
+#product-list{
+    display:flex;
+    /* wrap기능: 주어진 컨텐츠가 부모 컨텐츠의
+    크기를 넘어설때 사이즈 넘기지 않고 알아서 맞춰줌 */
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+.product-card{
+    width:180px;
+    height:300px;
+    margin-left:12px;
+    margin-right:12px;
+    margin-bottom: 12px;
+    border:1px solid black;
+    border-radius:12px;
+}
+.product-img{
+    width:100%;
+    height:210px;
+}
+.product-contents{
+    /* 컨텐츠의 주내용은 span으로 구성하는데,
+    span은 줄바꿈이 안되기 때문에
+    줄바꿈 효과주려면 flex-direction: column
+    으로 세로정렬해주는 식으로 꾸며줌 */
+    display:flex;
+    flex-direction: column;
+    padding: 8px;
+}
+.product-name{
+    font-size: 14px;
+}
+.product-price{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top:4px;
+}
+.product-seller{
+    display:flex;
+    align-items:center;
+    margin-top:12px;
+}
+.product-avatar{
+    width:24px;
+}
+/* ========================================================== */
+#footer{
+    height:200px;
+    background-color:red;
+}
+
